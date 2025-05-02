@@ -1,0 +1,22 @@
+:root {
+  /* CSS RESET */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Variables */
+  --bg-color-1: #060f13;
+  --bg-color-2: #0d1e26;
+  --color-1: #f4f1d2;
+  --color-2: #a9c5f1;
+  --main-blue: #015aff;
+}
+
+body {
+  background-color: var(--bg-color-1);
+  color: var(--color-1);
+}
+
+a {
+  color: inherit;
+}
