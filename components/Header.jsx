@@ -5,8 +5,8 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <div className={styles.mainContainer}>
-      <div>R.M.</div>
-      <div>
+      <div className={styles.logo}>R.M.</div>
+      <div className={styles.links}>
         <Link href="/">My Portfolio</Link>
         <Link href="/about">About me</Link>
       </div>

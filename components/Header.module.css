@@ -1,4 +1,14 @@
 .mainContainer {
   display: flex;
   justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
 }

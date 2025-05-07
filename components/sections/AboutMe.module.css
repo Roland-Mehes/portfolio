@@ -1,0 +1,84 @@
+.mainContainer {
+  padding: 64px 0 128px 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.firstRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstRow img {
+  position: relative;
+  border-radius: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  height: 60px;
+  width: 90px;
+  background-color: var(--main-blue);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  height: 60px;
+  width: 90px;
+  background-color: var(--main-blue);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.left h1,
+.right h1 {
+  font-size: 32px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.jobTitle {
+  font-size: 16px;
+  color: var(--color-2);
+}
+
+.companyName {
+  font-size: 18px;
+}
+
+.jobLocation {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,15 @@
+.MainWrapper {
+  padding: 0 128px;
+}
+
+@media (max-width: 768px) {
+  .MainWrapper {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 428px) {
+  .MainWrapper {
+    padding: 0 16px;
+  }
+}
