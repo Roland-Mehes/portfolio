@@ -8,6 +8,8 @@ import MainWrapper from '@/components/MainWrapper';
 
 const inter = Inter({
   weight: ['500', '700'],
+  subsets: ['latin'],
+  preload: true,
 });
 
 export const metaData = {
