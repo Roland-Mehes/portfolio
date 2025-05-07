@@ -13,8 +13,8 @@ const Projects = () => {
           <div className={styles.projectCards}>
             <div className={styles.image}>
               <Image
-                alt="rm-games"
-                src="/images/RM-Games.png"
+                alt="RM-Games"
+                src="/images/rm-games.png"
                 width={576}
                 height={200}
               ></Image>
