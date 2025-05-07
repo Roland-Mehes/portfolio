@@ -13,7 +13,7 @@ const Projects = () => {
           <div className={styles.projectCards}>
             <div className={styles.image}>
               <Image
-                alt="RM-Games"
+                alt="rm-games"
                 src="/images/RM-Games.png"
                 width={576}
                 height={200}
@@ -33,7 +33,7 @@ const Projects = () => {
             <div className={styles.image}>
               <Image
                 alt="Tic-Tac-Toe Game"
-                src="/images/Tic-Tac-Toe.png"
+                src="/images/tic-tac-toe.png"
                 width={576}
                 height={600}
               ></Image>
@@ -52,7 +52,7 @@ const Projects = () => {
             <div className={styles.image}>
               <Image
                 alt="Tic-Tac-Toe Game"
-                src="/images/React-Calculator.png"
+                src="/images/react-calculator.png"
                 width={576}
                 height={600}
               ></Image>
