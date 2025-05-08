@@ -1,17 +1,18 @@
-import styles from './Footer.module.css';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className={styles.mainContainer}>
+    <div
+      className={`flex flex-col gap-[64px] justify-center items-center pt-0 md:pt-[64px] pb-[128px]`}
+    >
       <div className="grid gap-[16px] justify-center">
         <div className="grid gap-[16px] text-center">
-          <h1 className={styles.h1}>Do you want to contact me?</h1>
-          <h2>
+          <h1 className="text-[40px] font-bold">Do you want to contact me?</h1>
+          <p className="text-[18px] leading-[180%]">
             Let's set up a meeting, talk and see what we can create together.
-          </h2>
+          </p>
         </div>
 
         <div className="flex items-center justify-center">

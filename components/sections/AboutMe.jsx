@@ -13,22 +13,25 @@ import TypeScript from '@/public/svg/TypeScript';
 const AboutMe = () => {
   return (
     <section id="aboutme">
-      <div className={styles.mainContainer}>
+      <div className="pt-[64px] pb-[128px]">
         <div className="grid gap-[15px] p">
-          <h1 className="text-center">About me</h1>
-          <div className={styles.gridContainer}>
-            <div className={`${styles.firstRow} `}>
+          <h1 className="text-center text-[40px] leading-[140%] font-bold">
+            About me
+          </h1>
+          <div className={` grid grid-cols-1 md:grid-cols-2 gap-[32px]`}>
+            <div className={` flex items-center justify-center`}>
               <div className={styles.imageWrapper}>
                 <Image
                   alt="Me in working time."
                   src={'/images/profile-anime-working-large.png'}
                   height={1}
                   width={505}
+                  className="rounded-[12px]"
                 ></Image>
               </div>
             </div>
-            <div className={styles.card}>
-              <p>
+            <div>
+              <p className="md:text-[18px] sm:text-[16px] leading-[180%]">
                 Hi, I'm Roland Méhes, a junior software developer. I’m
                 passionate about creating clean, efficient, and user-friendly
                 solutions, and I love tackling complex challenges with simple,
@@ -36,32 +39,46 @@ const AboutMe = () => {
                 finding better ways to deliver high-quality results..
               </p>
             </div>
-            <div className={styles.left}>
+            <div className="flex flex-col gap-[16px] ">
               {/*Education Container */}
-              <div className={styles.education}>
-                <h1>Education</h1>
-                <p className={styles.jobTitle}>
+              <div>
+                <h2 className="text-[32px] font-bold leading-[140%]">
+                  Education
+                </h2>
+                <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
                   Frontend Developement (JS+React)
                 </p>
-                <p className={styles.companyName}> SDA Academy</p>
-                <p className={styles.jobTitle}>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  SDA Academy
+                </p>
+                <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
                   Mathematics and Computer Science
                 </p>
-                <p className={styles.companyName}> LicRomCat Oradea</p>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  LicRomCat Oradea
+                </p>
               </div>
               {/*Language Container */}
               <div>
-                <h1>Languages</h1>
-                <ul>
-                  <li>Hungarian (Native)</li>
-                  <li>Romanian (C1)</li>
-                  <li>English (B2)</li>
-                  <li>German (B2)</li>
-                </ul>
+                <h2 className="text-[32px] font-bold leading-[140%]">
+                  Languages
+                </h2>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  Hungarian (Native)
+                </p>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  Romanian (C1)
+                </p>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  English (B2)
+                </p>
+                <p className="text-[18px] font-semibold leading-[180%]">
+                  German (B2)
+                </p>
               </div>
               {/*Skill Container */}
               <div>
-                <h1>Skills</h1>
+                <h1 className="text-[32px] font-bold leading-[140%]">Skills</h1>
                 <div className="flex gap-[16px] ">
                   <Html5 />
                   <Css3 />
@@ -74,26 +91,34 @@ const AboutMe = () => {
               </div>
               {/* Tools Container */}
               <div>
-                <h1>Tools</h1>
+                <h1 className="text-[32px] font-bold leading-[140%]">Tools</h1>
                 <div>
                   <Figma></Figma>
                 </div>
               </div>
             </div>
             {/* Experience Container */}
-            <div className={styles.right}>
-              <h1>Experience</h1>
+            <div className="flex flex-col gap-[21px]">
+              <h1 className="text-[32px] font-bold leading-[140%]">
+                Experience
+              </h1>
               {/* First Experience */}
               <div>
                 <div className="flex justify-between">
                   <div>
-                    <h3 className={styles.jobTitle}>Warehouse Manager </h3>
-                    <p className="font-bold">Graficard</p>
+                    <h3 className="font-[16px] leading-[180%] text-[var(--color-2)] ">
+                      Warehouse Manager
+                    </h3>
+                    <p className="text-[18px] leading-[180%] font-semibold">
+                      Graficard
+                    </p>
                   </div>
                   {/* Working period */}
                   <div>
-                    <p className={styles.jobLocation}>On-site</p>
-                    <p className={styles.jobLocation}>Oct 2024 - Present</p>
+                    <p className="font-[16px] leading-[180%] ">On-site</p>
+                    <p className="font-[16px] leading-[180%] ">
+                      Oct 2024 - Present
+                    </p>
                   </div>
                 </div>
                 <p>
@@ -105,13 +130,19 @@ const AboutMe = () => {
               <div>
                 <div className="flex justify-between">
                   <div>
-                    <h3 className={styles.jobTitle}>Shift Leader </h3>
-                    <p className="font-bold">Playmobil Herrieden</p>
+                    <h3 className="font-[16px] leading-[180%] text-[var(--color-2)]">
+                      Shift Leader
+                    </h3>
+                    <p className="text-[18px] leading-[180%] font-semibold">
+                      Playmobil Herrieden
+                    </p>
                   </div>
                   {/* Working period */}
                   <div>
-                    <p className={styles.jobLocation}>On-site</p>
-                    <p className={styles.jobLocation}>Jul 2017 - Jul 2024</p>
+                    <p className="font-[16px] leading-[180%] ">On-site</p>
+                    <p className="font-[16px] leading-[180%] ">
+                      Jul 2017 - Jul 2024
+                    </p>
                   </div>
                 </div>
                 <p>

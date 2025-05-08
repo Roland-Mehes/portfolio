@@ -46,12 +46,10 @@ const projects: Projects[] = [
 
 const Projects = () => {
   return (
-    <section id="projects" className={`py-36 grid gap-[68px]`}>
+    <section id="projects" className={`py-[64px]  grid gap-[68px]`}>
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="md:text-[40px] leading-[140%] font-bold ">
-          My Portfolio
-        </h2>
-        <p className="md:text[18px] leading-[180%]">
+        <h2 className="text-[40px] leading-[140%] font-bold ">My Portfolio</h2>
+        <p className="md:text-[18px] sm:text-[16px] leading-[180%]">
           From projects to experiments that I do in my spare time.
         </p>
       </div>
@@ -78,7 +76,9 @@ const Projects = () => {
                   <h3 className="text-2xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 ">{project.description}</p>
+                  <p className="md:text-[18px] sm:text-[16px] leading-[180%]">
+                    {project.description}
+                  </p>
                 </div>
               </Link>
             </motion.div>
