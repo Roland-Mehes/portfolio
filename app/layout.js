@@ -13,7 +13,7 @@ const inter = Inter({
   preload: true,
 });
 
-export const metaData = {
+export const metadata = {
   title: 'Roland Mehes | Portfolio',
   description: 'Junior developer portfolio built with Next.js',
   keywords: [
