@@ -4,11 +4,13 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.logo}>R.M.</div>
+    <div className={`${styles.mainContainer}`}>
+      <div className={styles.logo}>
+        <Link href={'#'}>R.M.</Link>
+      </div>
       <div className={styles.links}>
-        <Link href="/">My Portfolio</Link>
-        <Link href="/about">About me</Link>
+        <Link href="./#projects">My Portfolio</Link>
+        <Link href="./#aboutme">About me</Link>
       </div>
     </div>
   );

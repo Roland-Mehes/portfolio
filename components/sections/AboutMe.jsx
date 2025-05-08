@@ -12,7 +12,7 @@ import TypeScript from '@/public/svg/TypeScript';
 
 const AboutMe = () => {
   return (
-    <section>
+    <section id="aboutme">
       <div className={styles.mainContainer}>
         <div className="grid gap-[15px] p">
           <h1 className="text-center">About me</h1>

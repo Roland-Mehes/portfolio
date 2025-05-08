@@ -11,7 +11,6 @@
 *::after {
   /* CSS RESET */
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -37,7 +36,6 @@ h1 {
   margin: 0;
   padding: 0;
   font-size: 48px;
-  /* text-wrap: nowrap; */
   line-height: 140%;
   font-weight: 700;
 }
