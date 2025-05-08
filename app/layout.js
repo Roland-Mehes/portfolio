@@ -5,7 +5,6 @@ import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MainWrapper from '@/components/MainWrapper';
-import { type } from 'os';
 
 const inter = Inter({
   weight: ['500', '700'],
