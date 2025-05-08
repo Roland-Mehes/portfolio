@@ -19,7 +19,7 @@ const AboutMe = () => {
             About me
           </h1>
           <div className={` grid grid-cols-1 md:grid-cols-2 gap-[32px]`}>
-            <div className={` flex items-center justify-center`}>
+            <div className="flex items-center justify-center ">
               <div className={styles.imageWrapper}>
                 <Image
                   alt="Me in working time."
@@ -27,78 +27,91 @@ const AboutMe = () => {
                   height={1}
                   width={505}
                   className="rounded-[12px]"
-                ></Image>
+                />
               </div>
             </div>
-            <div>
-              <p className="md:text-[18px] sm:text-[16px] leading-[180%]">
-                Hi, I'm Roland Méhes, a junior software developer. I’m
+
+            {/* Description Text */}
+            <div className=" flex items-start md:items-center">
+              <p className="md:text-[18px] sm:text-[16px] leading-[180%] ">
+                Hi, I'm Roland Méhes, a junior software developer. I'm
                 passionate about creating clean, efficient, and user-friendly
                 solutions, and I love tackling complex challenges with simple,
                 intuitive designs. I'm always exploring new technologies and
-                finding better ways to deliver high-quality results..
+                finding better ways to deliver high-quality results.
               </p>
             </div>
-            <div className="flex flex-col gap-[16px] ">
+
+            <div className="flex flex-col gap-[16px]  order-2 lg:order-none ">
               {/*Education Container */}
-              <div className="order-first ">
-                <h2 className="text-[32px] font-bold leading-[140%]">
-                  Education
-                </h2>
-                <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
-                  Frontend Developement (JS+React)
-                </p>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  SDA Academy
-                </p>
-                <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
-                  Mathematics and Computer Science
-                </p>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  LicRomCat Oradea
-                </p>
-              </div>
-              {/*Language Container */}
-              <div className="order-last">
-                <h2 className="text-[32px] font-bold leading-[140%]">
-                  Languages
-                </h2>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  Hungarian (Native)
-                </p>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  Romanian (C1)
-                </p>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  English (B2)
-                </p>
-                <p className="text-[18px] font-semibold leading-[180%]">
-                  German (B2)
-                </p>
-              </div>
-              {/*Skill Container */}
-              <div>
-                <h1 className="text-[32px] font-bold leading-[140%]">Skills</h1>
-                <div className="flex gap-[16px] ">
-                  <Html5 />
-                  <Css3 />
-                  <JavaScriptSVG />
-                  <TypeScript />
-                  <ReactSVG />
-                  <NextSVG />
-                  <TailwindCss />
+              <div className="grid gap-[16px] lg:order-none order-2">
+                <div className="order-3 lg:order-none">
+                  <h2 className="text-[32px] font-bold leading-[140%]">
+                    Education
+                  </h2>
+                  <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
+                    Frontend Developement (JS+React)
+                  </p>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    SDA Academy
+                  </p>
+                  <p className="text-[16px] text-[var(--color-2)] leading-[180%]">
+                    Mathematics and Computer Science
+                  </p>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    LicRomCat Oradea
+                  </p>
                 </div>
-              </div>
-              {/* Tools Container */}
-              <div>
-                <h1 className="text-[32px] font-bold leading-[140%]">Tools</h1>
-                <div>
-                  <Figma></Figma>
+
+                {/*Language Container */}
+                <div className="order-3 lg:order-none">
+                  <h2 className="text-[32px] font-bold leading-[140%]">
+                    Languages
+                  </h2>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    Hungarian (Native)
+                  </p>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    Romanian (C1)
+                  </p>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    English (B2)
+                  </p>
+                  <p className="text-[18px] font-semibold leading-[180%]">
+                    German (B2)
+                  </p>
+                </div>
+
+                {/*Skill Container */}
+                <div className="order-4 lg:order-none">
+                  <h1 className="text-[32px] font-bold leading-[140%]">
+                    Skills
+                  </h1>
+                  <div className="flex gap-[16px] ">
+                    <Html5 />
+                    <Css3 />
+                    <JavaScriptSVG />
+                    <TypeScript />
+                    <ReactSVG />
+                    <NextSVG />
+                    <TailwindCss />
+                  </div>
+                </div>
+
+                {/* Tools Container */}
+                <div className="order-5 lg:order-none">
+                  <h1 className="text-[32px] font-bold leading-[140%]">
+                    Tools
+                  </h1>
+                  <div>
+                    <Figma></Figma>
+                  </div>
                 </div>
               </div>
             </div>
+
             {/* Experience Container */}
-            <div className="flex flex-col gap-[21px]">
+            <div className="flex flex-col gap-[21px] lg:order-none order-1">
               <h1 className="text-[32px] font-bold leading-[140%]">
                 Experience
               </h1>
