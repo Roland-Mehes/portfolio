@@ -41,7 +41,7 @@ const AboutMe = () => {
             </div>
             <div className="flex flex-col gap-[16px] ">
               {/*Education Container */}
-              <div>
+              <div className="order-first ">
                 <h2 className="text-[32px] font-bold leading-[140%]">
                   Education
                 </h2>
@@ -59,7 +59,7 @@ const AboutMe = () => {
                 </p>
               </div>
               {/*Language Container */}
-              <div>
+              <div className="order-last">
                 <h2 className="text-[32px] font-bold leading-[140%]">
                   Languages
                 </h2>
