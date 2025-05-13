@@ -2,7 +2,13 @@ import React from 'react';
 
 const Css3 = () => {
   return (
-    <svg viewBox="0 0 128 128" width={29} height={32}>
+    <svg
+      viewBox="0 0 128 128"
+      width={29}
+      height={32}
+      role="img"
+      aria-label="Css3 Logo"
+    >
       <path
         fill="#1572B6"
         d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"

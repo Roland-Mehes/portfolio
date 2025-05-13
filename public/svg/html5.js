@@ -2,7 +2,13 @@ import React from 'react';
 
 const Html5 = () => {
   return (
-    <svg viewBox="0 0 128 128" width="28" height="32">
+    <svg
+      viewBox="0 0 128 128"
+      width="28"
+      height="32"
+      role="img"
+      aria-label="HTML5 Logo"
+    >
       <path
         fill="#E44D26"
         d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"

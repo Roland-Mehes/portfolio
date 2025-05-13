@@ -2,7 +2,13 @@ import React from 'react';
 
 const NextSVG = () => {
   return (
-    <svg viewBox="0 0 128 128" width={29} height={31}>
+    <svg
+      viewBox="0 0 128 128"
+      width={29}
+      height={31}
+      role="img"
+      aria-label="Next.js Logo"
+    >
       <circle cx="64" cy="64" r="64"></circle>
       <path
         fill="url(#a)"
