@@ -1,6 +1,7 @@
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
+import FooterCTAButton from './FooterCTAButton';
 
 const Footer = () => {
   return (
@@ -17,11 +18,7 @@ const Footer = () => {
               Let's set up a meeting, talk and see what we can create together.
             </p>
           </div>
-          <div className="flex items-center justify-center">
-            <Link href="#">
-              <span className="custom-button">Send email</span>
-            </Link>
-          </div>
+          <FooterCTAButton />
         </div>
         <div className="grid gap-[32px]">
           <div className={'flex gap-[16px] justify-center'}>

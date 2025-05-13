@@ -2,7 +2,7 @@ import '../styles/global.css';
 import '../styles/variables.css';
 import { Inter } from 'next/font/google';
 
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header';
 import MainWrapper from '@/components/MainWrapper';
 
