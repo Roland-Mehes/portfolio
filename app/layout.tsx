@@ -2,8 +2,8 @@ import '../styles/global.css';
 import '../styles/variables.css';
 import { Inter } from 'next/font/google';
 
-import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer/Footer';
 import MainWrapper from '@/components/MainWrapper';
 
 const inter = Inter({
@@ -28,14 +28,18 @@ export const metadata = {
   type: 'website',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={inter.className}>
       <body>
         <Header />
         <MainWrapper>
           {children}
-          <Footer />
+          {<Footer />}
         </MainWrapper>
       </body>
     </html>

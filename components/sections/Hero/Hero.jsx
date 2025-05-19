@@ -5,7 +5,7 @@ import HeroLinks from './HeroLinks';
 import HeroCTAButton from './HeroCTAButton';
 import HeroImage from './HeroImage';
 
-const Hero = () => {
+export default function Hero() {
   return (
     <section
       id="hero"
@@ -21,6 +21,4 @@ const Hero = () => {
       <HeroImage />
     </section>
   );
-};
-
-export default Hero;
+}

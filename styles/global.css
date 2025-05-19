@@ -40,21 +40,28 @@ p {
   position: relative;
   padding: 10px 20px;
   background-color: var(--main-blue);
-  color: white;
   border: 2px solid transparent;
   text-align: center;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 0;
+  z-index: 10;
   isolation: isolate;
-  display: inline;
+  overflow: hidden;
+}
+
+.custom-button-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .custom-button:hover::before {
   content: '';
   position: absolute;
   inset: -0.1rem;
+  border-radius: inherit;
   filter: blur(0.8rem);
   background: conic-gradient(
     from var(--gradient-angle),
@@ -66,6 +73,7 @@ p {
   );
   border-radius: inherit;
   animation: neon-border 6s linear infinite;
+  transition: opacity 0.3s ease-in-out;
   z-index: -1;
   pointer-events: none;
 }
