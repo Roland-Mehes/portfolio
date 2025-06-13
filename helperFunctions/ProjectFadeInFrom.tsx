@@ -1,7 +1,7 @@
-export const fadeInFrom = (direction: 'left' | 'right') => ({
+export const fadeInFrom = (direction: 'RightContainer' | 'LeftContainer') => ({
   hidden: {
     opacity: 0,
-    x: direction === 'left' ? -180 : 0,
+    x: direction === 'RightContainer' ? -180 : 0,
   },
   visible: {
     opacity: 1,

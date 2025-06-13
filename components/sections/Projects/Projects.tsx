@@ -3,7 +3,10 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   return (
-    <section id="projects" className={`py-[64px] grid gap-[68px]`}>
+    <section
+      id="projects"
+      className={`py-[64px] grid gap-[68px] className = 'px-[16px] md:px-[64px] lg:px-[128px]';`}
+    >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-[40px] leading-[140%] font-bold">My Portfolio</h2>
         <p className="md:text-[18px] sm:text-[16px] leading-[180%]">

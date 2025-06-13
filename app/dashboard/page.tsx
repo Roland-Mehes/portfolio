@@ -2,7 +2,7 @@
 import { logout } from '@/fbServices/fbAuth';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import Card from './(components)/Card';
 export default function Dashboard() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -21,11 +21,13 @@ export default function Dashboard() {
   };
 
   return (
-    <>
-      <div>Welcome to the dashboard!</div>
+    <div className="grid justify-center">
+      <div className="bg-amber-600 w-fit m-auto">Welcome to the dashboard!</div>
       <button onClick={handleOnClick} disabled={loading}>
         {loading ? 'Logging out...' : 'Logout'}
+
+        <Card />
       </button>
-    </>
+    </div>
   );
 }

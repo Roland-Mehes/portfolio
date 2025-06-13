@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Contact() {
   const [form, setForm] = useState({
+    type: '',
     firstname: '',
     lastname: '',
     email: '',
@@ -24,8 +25,14 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!isFormValid) {
+      setResponseMsg('Please fill every space');
+      return;
+    }
     setLoading(true);
     setResponseMsg('');
+    console.log('>>>Form Submitted');
 
     try {
       const res = await fetch('/api/contact', {
@@ -41,6 +48,7 @@ export default function Contact() {
       } else {
         setResponseMsg('Message sent successfully!');
         setForm({
+          type: 'ContactForm',
           firstname: '',
           lastname: '',
           email: '',
@@ -196,8 +204,8 @@ export default function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={loading || !isFormValid}
-            className="custom-button-wrapper"
+            // disabled={loading || !isFormValid}
+            className="custom-button-wrapper "
           >
             <span className="custom-button">
               {loading ? 'Sending...' : 'Send Message'}

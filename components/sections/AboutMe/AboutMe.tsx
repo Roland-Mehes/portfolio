@@ -18,7 +18,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
 
 const AboutMe: React.FC = () => {
   return (
-    <section id="aboutme">
+    <section id="aboutme" className="px-[16px] md:px-[64px] lg:px-[128px]">
       <div className="pt-[64px] pb-[128px]">
         <div className="grid gap-[15px]">
           <h1 className="text-center text-[40px] leading-[140%] font-bold">
@@ -41,11 +41,18 @@ const AboutMe: React.FC = () => {
             {/* Intro */}
             <div className="flex items-start md:items-center">
               <p className="md:text-[18px] sm:text-[16px] leading-[180%]">
-                Hi, I&apos;m Roland Méhes, a junior software developer. I&apos;m
+                Hi, I&apos;m Roland Méhes, a junior software developer
                 passionate about creating clean, efficient, and user-friendly
                 solutions. I love tackling complex challenges with simple,
                 intuitive designs. I&apos;m always exploring new technologies
-                and finding better ways to deliver high-quality results.
+                and finding better ways to deliver high-quality results. I
+                believe in collaboration and continuous learning to improve both
+                my skills and the products I work on. My goal is to grow into a
+                full-stack developer and contribute to impactful projects that
+                make users&apos; lives easier. I enjoy working with JavaScript,
+                React, and Next.js to build performant and accessible web
+                applications. When I&apos;m not coding, I love spending time
+                hiking with my family.
               </p>
             </div>
 

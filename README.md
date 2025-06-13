@@ -9,7 +9,7 @@ The goal of this portfolio is to:
 - Share a short introduction about myself,
 - Showcase my previous work and projects,
 - Highlight my past job experiences,
-- And (soon) include a "Testimonials" section with client feedback.
+- And include a "Testimonials" section with client feedback.
 
 ## ⚙️ Technologies Used
 
@@ -19,30 +19,29 @@ The goal of this portfolio is to:
 
 ### 🔧 Planned Features
 
-- Integration with **MongoDB** to store dynamic content such as testimonials.
+- Integration with **Firestore** to store dynamic content such as testimonials.
 - An **admin interface** to manage and update content without hardcoding data.
 
 ## 🚀 Deployment
 
 The project will be deployed on **Vercel**.
 
-🔗 Live Demo (coming soon): [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
+🔗 Link: [https://portfolio-chi-lime-24.vercel.app/](https://portfolio-chi-lime-24.vercel.app/)
 
 ## 📑 Sections
 
-- **About Me**
 - **Projects**
+- **About Me**
 - **Previous Workplaces**
-- _(Upcoming)_ **Testimonials**
 
 ## 🌙 Upcoming Enhancements
 
-- Admin dashboard integration
+- Admin dashboard integration ✅
 - Dynamic testimonials via database
 
 ---
 
-📫 Feel free to connect with me:
+📫 Feel free to connect with me through the links below<!-- , or via the "Contact me" section on my portfolio website -->:
 
 - [LinkedIn](https://www.linkedin.com/in/roland-mehes/)
 - [GitHub](https://github.com/Roland-Mehes)

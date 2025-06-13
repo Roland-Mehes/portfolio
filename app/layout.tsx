@@ -1,16 +1,8 @@
 import '../styles/global.css';
 import '../styles/variables.css';
-import { Inter } from 'next/font/google';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
-import MainWrapper from '@/components/MainWrapper';
-
-const inter = Inter({
-  weight: ['500', '700'],
-  subsets: ['latin'],
-  preload: true,
-});
 
 export const metadata = {
   title: 'Roland Mehes | Portfolio',
@@ -34,13 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body>
         <Header />
-        <MainWrapper>
-          {children}
-          {<Footer />}
-        </MainWrapper>
+        {children}
+        {<Footer />}
       </body>
     </html>
   );

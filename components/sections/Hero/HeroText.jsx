@@ -65,8 +65,11 @@ const HeroText = () => {
         <AnimatedLine text={line3} delay={delay3} />
       </h1>
       <p className="text-[16px] md:text-[18px] text-center md:text-start leading-[180%] mt-4">
-        Crafting clean, efficient web experiences with JavaScript, React &
-        Next.js. Coding isn't just what I do — it's how I think.
+        Crafting clean, efficient web experiences with
+        <span className="text-[var(--color-2)]">
+          &nbsp;JavaScript, React & Next.js
+        </span>
+        . Coding isn't just what I do — it's how I think.
       </p>
     </div>
   );

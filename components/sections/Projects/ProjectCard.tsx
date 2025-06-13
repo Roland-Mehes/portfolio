@@ -7,7 +7,7 @@ import { iconMap } from '@/data/IconLibrary/IconLibrary';
 import { fadeInFrom } from '@/helperFunctions/ProjectFadeInFrom';
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const direction = project.id % 2 === 0 ? 'left' : 'right';
+  const direction = project.id % 2 === 0 ? 'RightContainer' : 'LeftContainer';
 
   return (
     <motion.div
