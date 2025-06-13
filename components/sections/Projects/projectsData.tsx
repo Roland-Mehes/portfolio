@@ -2,9 +2,9 @@ export type Project = {
   id: number;
   title: string;
   description: string;
-  image: string;
+  imageURL: string;
   url: string;
-  tech?: string[]; // csak stringeket tárol
+  tech: string[];
 };
 
 export const projects: Project[] = [
@@ -15,7 +15,7 @@ export const projects: Project[] = [
       engaging games for users of all ages. Simple, fun, and easy to
       access, bringing classic gaming experiences to your browser with
       a modern twist.`,
-    image: '/images/rm-games.png',
+    imageURL: '/images/rm-games.jpg',
     url: 'https://rm-games.netlify.app/',
     tech: ['ReactSVG', 'Css3'],
   },
@@ -26,7 +26,7 @@ export const projects: Project[] = [
       against an AI opponent. The design was part of a Figma project
       inspired by a platform that provides ideas for junior-level
       projects.`,
-    image: '/images/tic-tac-toe.png',
+    imageURL: '/images/tic-tac-toe.jpg',
     url: 'https://tic-tac-toe-react-lyart-psi.vercel.app/',
     tech: ['ReactSVG', 'Css3'],
   },
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       standard arithmetic operations. The project was inspired by a
       platform offering ideas for junior-level developers and designed
       as part of a Figma-based UI concept.`,
-    image: '/images/react-calculator.png',
+    imageURL: '/images/react-calculator.png',
     url: 'https://basic-calculator-murex.vercel.app/',
     tech: ['ReactSVG', 'Css3'],
   },

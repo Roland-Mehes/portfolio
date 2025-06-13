@@ -10,7 +10,11 @@ export default function Contact() {
     email: '',
     subject: '',
     message: '',
+    honeypot: '',
   });
+
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,11 +22,52 @@ export default function Contact() {
     setForm({ ...form, [e.target.id]: e.target.value });
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMsg('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setResponseMsg(data.error || 'Something went wrong');
+      } else {
+        setResponseMsg('Message sent successfully!');
+        setForm({
+          firstname: '',
+          lastname: '',
+          email: '',
+          subject: '',
+          message: '',
+          honeypot: '',
+        });
+      }
+    } catch (error) {
+      setResponseMsg('Failed to send message');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const isFormValid =
+    form.firstname &&
+    form.lastname &&
+    form.email &&
+    form.subject &&
+    form.message;
+
   return (
     <section className="bg-[var(--bg-color-1)] text-[var(--color-1)] py-16 px-4 lg:px-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Form Section */}
-        <form className="grid gap-4">
+        <form onSubmit={handleSubmit} className="grid gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* First Name */}
             <div className="relative">
@@ -135,11 +180,43 @@ export default function Contact() {
               Your Message...
             </label>
           </div>
+          {/* Honeypot vs Spamms */}
+          <input
+            type="text"
+            id="honeypot"
+            name="honeypot"
+            value={form.honeypot}
+            autoComplete="off"
+            aria-hidden="true"
+            onChange={handleChange}
+            style={{ display: 'none' }}
+            tabIndex={-1}
+          />
 
           {/* Submit Button */}
-          <button type="submit" className="custom-button-wrapper">
-            <span className="custom-button"> Send Message</span>
+          <button
+            type="submit"
+            disabled={loading || !isFormValid}
+            className="custom-button-wrapper"
+          >
+            <span className="custom-button">
+              {loading ? 'Sending...' : 'Send Message'}
+            </span>
           </button>
+
+          {/*  After submit */}
+
+          {responseMsg && (
+            <p
+              className={`mt-4 flex justify-self-center ${
+                responseMsg.includes('success')
+                  ? 'text-green-500'
+                  : 'text-red-500'
+              }`}
+            >
+              {responseMsg}
+            </p>
+          )}
         </form>
 
         {/* Contact Info Section */}

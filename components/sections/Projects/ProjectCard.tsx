@@ -4,19 +4,26 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from './projectsData';
 import { iconMap } from '@/data/IconLibrary/IconLibrary';
+import { fadeInFrom } from '@/helperFunctions/ProjectFadeInFrom';
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const direction = project.id % 2 === 0 ? 'left' : 'right';
+
   return (
     <motion.div
       key={project.id}
+      variants={fadeInFrom(direction)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: 'spring', stiffness: 200 }}
       className="bg-[var(--bg-color-2)] rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/40 transition-shadow duration-300"
     >
-      <Link href={project.url}>
+      <Link href={project.url} target="_blank" rel="noopener norefferer">
         <div className="relative w-full aspect-[16/9]">
           <Image
-            src={project.image}
+            src={project.imageURL}
             alt={project.title}
             fill
             className="object-cover"

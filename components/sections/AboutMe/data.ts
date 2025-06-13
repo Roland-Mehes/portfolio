@@ -56,6 +56,14 @@ export const languages = [
 
 export const experience = [
   {
+    role: 'Mentor',
+    company: 'BeCoder',
+    type: 'Remote',
+    period: 'June 2025 - Present',
+    description: 'Small desc',
+  },
+
+  {
     role: 'Warehouse Manager',
     company: 'Graficard',
     type: 'On-site',

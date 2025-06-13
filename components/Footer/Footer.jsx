@@ -1,7 +1,6 @@
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
-import ContactLink from './componenets/ContactLink';
 
 const Footer = () => {
   return (
