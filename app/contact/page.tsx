@@ -32,7 +32,6 @@ export default function Contact() {
     }
     setLoading(true);
     setResponseMsg('');
-    console.log('>>>Form Submitted');
 
     try {
       const res = await fetch('/api/contact', {

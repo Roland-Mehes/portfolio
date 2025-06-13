@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Hero.module.css';
 import HeroText from './HeroText';
 import HeroLinks from './HeroLinks';
 import HeroCTAButton from './HeroCTAButton';

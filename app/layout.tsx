@@ -3,6 +3,7 @@ import '../styles/variables.css';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
+import { ThemeProvider } from '@/components/ThemeContext';
 
 export const metadata = {
   title: 'Roland Mehes | Portfolio',
@@ -28,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        {<Footer />}
+        <ThemeProvider>
+          <Header />
+          {children}
+          {<Footer />}
+        </ThemeProvider>
       </body>
     </html>
   );

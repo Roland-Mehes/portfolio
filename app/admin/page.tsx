@@ -1,15 +1,26 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/fbServices/fb';
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [user, loading, error] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user?.email) {
+      const redirect = async () => {
+        await router.push('/dashboard');
+      };
+      redirect();
+    }
+  }, [user, router]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,10 +41,13 @@ export default function LoginPage() {
 
       router.push('/dashboard');
     } catch (err) {
-      setError(`Login failed: ' ${err}`);
+      setErrorMsg(`Login failed: ' ${err}`);
     }
   };
 
+  if (user?.email || loading) {
+    return <p>Redirecting...</p>;
+  }
   return (
     <form
       onSubmit={handleLogin}
@@ -52,7 +66,7 @@ export default function LoginPage() {
         className="border-2 outline-none rounded"
       />
 
-      {error ? `${error}` : ''}
+      {errorMsg ? `${errorMsg}` : ''}
 
       <button type="submit" className="border-2 w-20 rounded cursor-pointer">
         Login
