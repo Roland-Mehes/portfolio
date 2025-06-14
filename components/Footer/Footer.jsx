@@ -18,6 +18,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        © 2025 Roland Mehes. All rights reserved.
       </div>
     </section>
   );

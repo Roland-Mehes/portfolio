@@ -2,7 +2,11 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserLocalPersistence,
+} from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/fbServices/fb';
 
@@ -16,7 +20,7 @@ export default function LoginPage() {
   useEffect(() => {
     if (user?.email) {
       const redirect = async () => {
-        await router.push('/dashboard');
+        router.push('/dashboard');
       };
       redirect();
     }
@@ -25,6 +29,8 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      await setPersistence(auth, browserLocalPersistence);
+
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,

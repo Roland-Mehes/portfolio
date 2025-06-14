@@ -97,7 +97,7 @@ const AboutMe: React.FC = () => {
                       >
                         <div className="grid  justify-items-center items-center cursor-pointer group relative">
                           <Icon />
-                          <p className="!text-[10px] hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2">
+                          <p className="text-[10px] hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2">
                             {name}
                           </p>
                         </div>
@@ -118,7 +118,7 @@ const AboutMe: React.FC = () => {
                       >
                         <div className="group relative cursor-pointer">
                           <Icon />
-                          <p className="!text-[10px] hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2">
+                          <p className="text-[10px] hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2">
                             {name}
                           </p>
                         </div>
@@ -136,7 +136,7 @@ const AboutMe: React.FC = () => {
                 <div key={idx}>
                   <div className="flex justify-between">
                     <div>
-                      <h3 className="text-[16px] leading-[180%] text-[var(--color-2)]">
+                      <h3 className="text-[18px] leading-[180%] text-[var(--color-2)]">
                         {exp.role}
                       </h3>
                       <p className="text-[18px] font-semibold leading-[180%]">
@@ -148,7 +148,9 @@ const AboutMe: React.FC = () => {
                       <p className="text-[16px] leading-[180%]">{exp.period}</p>
                     </div>
                   </div>
-                  <p>{exp.description}</p>
+                  <p className="text-[18px] leading-[180%]">
+                    {exp.description}
+                  </p>
                 </div>
               ))}
             </div>

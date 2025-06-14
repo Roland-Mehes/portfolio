@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           />
         </div>
         <div className="flex pt-[20px] px-8 gap-4 justify-self-center">
-          {/* <p> Tech Stack</p> */}
+          {/* Tech Stack*/}
           <div className="flex gap-[20px]">
             {project.tech?.map((tech, index) => (
               <p key={tech}>{iconMap[tech]}</p>
